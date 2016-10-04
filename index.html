@@ -5,54 +5,69 @@
     <title>Craven Studio</title>
 
     <link rel="stylesheet" href="htdocs/css/normalize.css">
-    <link rel="stylesheet" href="htdocs/css/skeleton.css">
     <link rel="stylesheet" href="htdocs/css/main.css">
 </head>
 <body>
-    
-<!-- .container is main centered wrapper -->
-<div class="container">
+    <div class="cs-container">
+        <header class="cs-header">
+            <img src="htdocs/img/logo-small.png" alt="Craven Studio" class="cs-logo" />  
 
-  <!-- columns should be the immediate child of a .row -->
-  <div class="row">
-    <div class="one column">
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Projects</a></li>
-        </ul>    
-    </div>    
-  </div>
+            <nav class="cs-navigation cs-text-huge">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#">Projects</a></li>
+                </ul>
+            </nav>
+        </header>
 
-  <!-- just use a number and class 'column' or 'columns' -->
-  <div class="row">
-    <div class="two columns">Two</div>
-    <div class="ten columns">Ten</div>
-  </div>
+        <article class="cs-content" id="home">
+            <header class="cs-section cs-width-1of1">
+                <h1>Home</h1>
+            </header>
+            
+            <section class="cs-section cs-width-1of2">
+<!-- start slipsum code -->
 
-  <!-- there are a few shorthand columns widths as well -->
-  <div class="row">
-    <div class="one-third column">1/3</div>
-    <div class="two-thirds column">2/3</div>
-  </div>
-  <div class="row">
-    <div class="one-half column">1/2</div>
-    <div class="one-half column">1/2</div>
-  </div>
+<p>Normally, both your asses would be dead as fucking fried chicken, but you happen to pull this shit while I'm in a transitional period so I don't wanna kill you, I wanna help you. But I can't give you this case, it don't belong to me. Besides, I've already been through too much shit this morning over this case to hand it over to your dumb ass. </p>
 
-  <!-- Standard buttons -->
-<a class="button" href="#">Anchor button</a>
-<button>Button element</button>
-<input type="submit" value="submit input">
-<input type="button" value="button input">
+<p>You think water moves fast? You should see ice. It moves like it has a mind. Like it knows it killed the world once and got a taste for murder. After the avalanche, it took us a week to climb out. Now, I don't know exactly when we turned on each other, but I know that seven of us survived the slide... and only five made it out. Now we took an oath, that I'm breaking now. We said we'd say it was the snow that killed the other two, but it wasn't. Nature is lethal but it doesn't hold a candle to man. </p>
 
-<!-- Primary buttons -->
-<a class="button button-primary" href="#">Anchor button</a>
-<button class="button-primary">Button element</button>
-<input class="button-primary" type="submit" value="submit input">
-<input class="button-primary" type="button" value="button input">
+<p>Your bones don't break, mine do. That's clear. Your cells react to bacteria and viruses differently than mine. You don't get sick, I do. That's also clear. But for some reason, you and I react the exact same way to water. We swallow it too fast, we choke. We get some in our lungs, we drown. However unreal it may seem, we are connected, you and I. We're on the same curve, just on opposite ends. </p>
 
-</div>
+<!-- end slipsum code -->
+                <a href="#about"> cs blue </a>
+            </section>
+            
+            <section class="cs-section cs-width-1of2">
+                <p>content 2</p>
+            </section>        
+        </article>
+
+        <article class="cs-content cs-blue-bg" id="about">
+
+            <section class="cs-section cs-width-1of2">
+                <p>content 1</p>
+            </section>
+            
+            <section class="cs-section cs-width-1of2">
+                <p>content 2</p>
+            </section>        
+        </article>
+
+        <article class="cs-content cs-orange-bg" id="a3">
+            <section class="cs-section cs-width-1of2">
+                <p>content 1</p>
+            </section>
+            
+            <section class="cs-section cs-width-1of2">
+                <p>content 2</p>
+            </section>        
+        </article> 
+
+        <a href="#a3" class="cs-nav-btn">Pil neråt</a>
+
+    </div>
 
 </body>
 </html>
