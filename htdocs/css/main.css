@@ -3,7 +3,16 @@ html, body {
 }
 body {
     min-height: 100%;
-    background-image: url("../img/white-background.jpg");
+}
+
+h1, h2, h3, h4, h5 { font-family: Impact, Charcoal, sans-serif; }
+
+a { color: orange; }
+
+.cs-footer {
+    position: absolute;
+    left: 5px;
+    font-size: 0.2em;
 }
 
 .cs-container {
@@ -11,10 +20,9 @@ body {
     height: 100%;
 }
 
-.cs-header {
+.cs-header, .cs-content-inner {
     position: relative;
     width: 100%;
-    height: 136px;
     max-width: 960px;
     margin: 0 auto;
 }
@@ -24,6 +32,10 @@ body {
     top: 0;
     left: 0;
 }
+
+.cs-logo {
+    z-index: -1;
+} 
 
 /** Navigation **/
 .cs-navigation {
@@ -41,6 +53,7 @@ body {
 }
 
 .cs-navigation li a {
+    z-index: 1;
     color: #000;
     text-decoration: none;
     line-height: 40px;
@@ -48,7 +61,7 @@ body {
 }
 
 .cs-navigation li a:hover {
-    color: #333;
+    color: #555;
 }
 
 /** Typography **/
@@ -62,66 +75,109 @@ body {
 
 /** Grid **/
 .cs-content {
-    z-index:0; 
+    z-index: 0; 
     width: 100%;
     height: 100%;
-    -webkit-transform: translateZ( 0 );
-    transform: translateZ( 0 );
-    -webkit-transition: -webkit-transform 0.6s ease-in-out;
-    transition: transform 0.6s ease-in-out;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
+    transition-delay: 2s;
+    transition: background-color 2s ease;
 }
+
+.cs-content#projects:target {
+    background: #448ccb;
+}
+
+/*#projects cs-nav-btn - Todo: change color of btn when blue bg */
 
 .cs-section {
   width: 100%;
+  margin-top: 10px;
   float: left;
   box-sizing: border-box; 
+  overflow: hidden;
 }
 
+.cs-section img { width: 100%;}
+
 .cs-section h1, 
+.cs-section h2,
+.cs-section h3,
+.cs-section h4,
+.cs-section h5 {
+    margin: 0;
+    padding: 10px 0 4px 0;
+    letter-spacing: 1px;
+}
+
 .cs-section p,
 .cs-section a {
     margin: 0;
-    padding: 10px;
+    padding: 0 10px;
 }
 
-.cs-width-1of2 {
-    width: 50%;
-}
+.cs-width-1of2 { width: 50%;}
+.cs-width-1of3 { width: 33.3%;}
 
 /** Themes **/
-.cs-blue-bg {
-    background: deepskyblue;
-}
+.cs-bg-blue { background: #448ccb; }
+.cs-bg-green { background: greenyellow; }
+.cs-bg-orange { background: orange; }
 
-.cs-green-bg {
-    background: greenyellow;
-}
+.cs-color-blue { color: #448ccb; }
+.cs-color-green { color: greenyellow; }
+.cs-color-orange { color: orange; }
+.cs-color-white { color: #fff; }
 
-.cs-orange-bg {
-    background: orange;
-}
+.cs-bg-airbrush {background: url("../img/airbrush.jpg") no-repeat 0px 60%;}
 
 /** Scroll **/
 .cs-nav-btn {
     position: fixed;
+    display: block;
+    left: 0; 
+    right: 0; 
     bottom: 10px;
-    left: 50%;
+    margin-left: auto; 
+    margin-right: auto;     
+    width: 60px;
+    height: 60px;
+    background: #dcdcdc;
+    border-radius: 30px;
+    font-size: 25px;
+    transition: background-color 0.5s ease;
 }
 
-/* Todo: http://jsfiddle.net/YYPKM/2455/ */
-
-a[ id= "a1" ]:target ~ .cs-content {
-    -webkit-transform: translateY( 0px);
-    transform: translateY( 0px );
+.cs-nav-btn:hover {
+    cursor: pointer;
+    background: #555;
 }
 
-a[ id= "about" ]:target ~ .cs-content {
-    -webkit-transform: translateY( -500px );
-    transform: translateY( -500px );
+.cs-nav-btn::before {
+    position: absolute;
+    margin: auto;
+    top: -18px; left: 0; bottom: 0; right: 0;    
+    content: "";
+    display: inline-block;
+    width: 0.6em;
+    height: 0.6em;
+    border-right: 0.2em solid #fff;
+    border-top: 0.2em solid #fff;
+    transform: rotate(135deg);
 }
-a[ id= "a3" ]:target ~ .cs-content {
-    -webkit-transform: translateY( -1000px );
-    transform: translateY( -1000px );
+
+.cs-nav-btn::after {
+    position: absolute;
+    margin: auto;
+    top: 10px; left: 0; bottom: 0; right: 0;    
+    content: "";
+    display: inline-block;
+    width: 0.6em;
+    height: 0.6em;
+    border-right: 0.2em solid #fff;
+    border-top: 0.2em solid #fff;
+    transform: rotate(135deg);
 }
+
+/** Mobile **/
+    /*-webkit-text-fill-color: #000; /* Will override color (regardless of order) 
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #fff;*/
