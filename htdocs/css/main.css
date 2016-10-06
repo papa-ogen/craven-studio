@@ -79,11 +79,25 @@ a { color: orange; }
     width: 100%;
     height: 100%;
     transition-delay: 2s;
-    transition: background-color 2s ease;
+}
+
+.cs-content-bg { transition: background-color 2s ease; }
+
+.cs-content-bg-image { 
+    background-image: url("../img/white-pixel.png");
+    transition: background-image 1s ease-in;
+}
+
+.cs-content#home .cs-section {
+    padding-top: 8em;
 }
 
 .cs-content#projects:target {
     background: #448ccb;
+}
+
+.cs-content#contact:target {
+    background-image: url("../img/humla.jpg");
 }
 
 /*#projects cs-nav-btn - Todo: change color of btn when blue bg */
@@ -104,7 +118,7 @@ a { color: orange; }
 .cs-section h4,
 .cs-section h5 {
     margin: 0;
-    padding: 10px 0 4px 0;
+    padding: 10px 0 8px 0;
     letter-spacing: 1px;
 }
 
@@ -113,6 +127,8 @@ a { color: orange; }
     margin: 0;
     padding: 0 10px;
 }
+
+.cs-section p {margin-bottom: 14px;}
 
 .cs-width-1of2 { width: 50%;}
 .cs-width-1of3 { width: 33.3%;}
