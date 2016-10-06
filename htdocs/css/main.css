@@ -1,3 +1,7 @@
+:root {
+  --orange-bg-color: orange;
+}
+
 html, body {
     height: 100%;
 }
@@ -7,7 +11,7 @@ body {
 
 h1, h2, h3, h4, h5 { font-family: Impact, Charcoal, sans-serif; }
 
-a { color: orange; }
+a { color: var(--orange-bg-color); }
 
 .cs-footer {
     position: absolute;
@@ -84,8 +88,12 @@ a { color: orange; }
 .cs-content-bg { transition: background-color 2s ease; }
 
 .cs-content-bg-image { 
-    background-image: url("../img/white-pixel.png");
-    transition: background-image 1s ease-in;
+    opacity: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../img/humla.jpg");
+    background-repeat: no-repeat;
+    transition: opacity 1s ease-in;
 }
 
 .cs-content#home .cs-section {
@@ -96,8 +104,8 @@ a { color: orange; }
     background: #448ccb;
 }
 
-.cs-content#contact:target {
-    background-image: url("../img/humla.jpg");
+.cs-content#mattias:target .cs-content-bg-image {
+    opacity: 1;
 }
 
 /*#projects cs-nav-btn - Todo: change color of btn when blue bg */
@@ -146,6 +154,9 @@ a { color: orange; }
 .cs-bg-airbrush {background: url("../img/airbrush.jpg") no-repeat 0px 60%;}
 
 /** Scroll **/
+
+/* Todo: css only scroll - 100vh */
+
 .cs-nav-btn {
     position: fixed;
     display: block;
