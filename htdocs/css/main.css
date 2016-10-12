@@ -1,7 +1,3 @@
-:root {
-  --orange-bg-color: orange;
-}
-
 html, body {
     height: 100%;
 }
@@ -12,6 +8,11 @@ body {
 h1, h2, h3, h4, h5 { font-family: Impact, Charcoal, sans-serif; }
 
 a { color: var(--orange-bg-color); }
+
+/* Theme Variables */
+:root {
+  --orange-bg-color: orange;
+}
 
 .cs-footer {
     position: absolute;
@@ -88,6 +89,7 @@ a { color: var(--orange-bg-color); }
 .cs-content-bg { transition: background-color 2s ease; }
 
 .cs-content-bg-image { 
+    position: absolute;
     opacity: 0;
     width: 100vw;
     height: 100vh;
@@ -104,7 +106,7 @@ a { color: var(--orange-bg-color); }
     background: #448ccb;
 }
 
-.cs-content#mattias:target .cs-content-bg-image {
+.cs-content#contact:target .cs-content-bg-image {
     opacity: 1;
 }
 
@@ -208,3 +210,26 @@ a { color: var(--orange-bg-color); }
     /*-webkit-text-fill-color: #000; /* Will override color (regardless of order) 
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: #fff;*/
+
+
+/** Form **/
+form, fieldset {
+    margin: 10px 0;
+    border: 0; 
+}
+
+input {
+    width: 50%;
+    line-height: 24px;
+    font-size: 14px;
+    color: #555;
+    border: 0px;
+    padding: 4px;
+    margin: 4px 0;
+    display: block;
+}
+
+textarea {
+    display: block;
+    margin: 4px 0;
+}

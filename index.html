@@ -6,13 +6,17 @@
 
     <link rel="stylesheet" href="htdocs/css/normalize.css">
     <link rel="stylesheet" href="htdocs/css/main.css">
+    <link rel="stylesheet" href="htdocs/css/cs.css">
 </head>
 <body>
     <div class="cs-container">
         <article class="cs-content cs-bg-airbrush" id="home">
             <header class="cs-header">
-                <img src="htdocs/img/logo-small.png" alt="Craven Studio" class="cs-logo" />  
-
+                <picture>
+                    <source srcset="htdocs/img/logo.png" media="(min-width: 600px)">
+                    <img src="htdocs/img/logo-small.png" alt="Craven Studio" class="cs-logo" /> 
+                </picture>
+                 
                 <nav class="cs-navigation cs-text-huge">
                     <ul>
                         <li><a href="#about">About</a></li>
@@ -75,34 +79,47 @@
             </div>
         </article> 
 
-        <article class="cs-content cs-content-bg-image cs-color-white" id="contact">
-            <div class="cs-content-inner">
-                <section class="cs-section cs-width-1of2">
-                    <h1>Contact</h1>
-                    <fieldset>
+        <article class="cs-content cs-color-white" id="contact">
+            <div class="cs-content-bg-image"></div>
 
+            <div class="cs-content-inner">
+                <section class="cs-section cs-width-1of1">
+                    <h1>Contact</h1>
+                    <form>
+                    <fieldset>
+                        <legend>Send me a message!</legend>
+                        <p>
+                            <label>
+                                <span>Your Name</span>
+                                <input type="text" name="fullName" placeholder="Your name" required />
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <span>Your email address</span>
+                                <input type="email" name="email" placeholder="Your email address" required />
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                Your Message
+                                <textarea name="message" cols="30" rows="10"></textarea>
+                            </label>
+                        </p>
+                        <p>
+                            <input type="submit" value="Send!">
+                        </p>
                     </fieldset>
+                    </form>
                 </section>
             </div>
         </article> 
-
-        <article class="cs-content cs-color-white" id="mattias">
-            <div class="cs-content-bg-image" style="position: absolute;"></div>
-
-            <div class="cs-content-inner">
-                <section class="cs-section cs-width-1of2">
-                    <h1>Contact</h1>
-                    <fieldset>
-
-                    </fieldset>
-                </section>
-            </div>    
-        </article>
 
         <a href="#home" class="cs-nav-btn"></a>
 
     </div>
 
 <script src="htdocs/js/main.js"></script>
+<script src="htdocs/js/cs.js"></script>
 </body>
 </html>

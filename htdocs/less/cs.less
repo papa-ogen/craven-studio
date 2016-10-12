@@ -1,0 +1,36 @@
+/* Mixin */
+.border-radius (@radius: 5px) {
+	-webkit-border-radius: @radius;
+	-moz-border-radius: @radius;
+	border-radius: @radius;
+}
+
+/* Implementation */
+#somediv {
+	.border-radius(20px);
+}
+
+@media screen and (min-width: 480px) {
+    html {
+        font-size: 1.1em;
+    }
+    .cs-header .cs-logo {
+        position: relative;
+        display: block;
+        margin: auto;
+        padding-top: 10px;
+    }
+
+    .cs-navigation ul {
+        padding: 10px 0;
+    }
+
+    .cs-footer {
+        display: none;
+    }
+
+    .cs-width-1of2 {
+        padding: 10px;
+        width: 75%;
+    }
+}

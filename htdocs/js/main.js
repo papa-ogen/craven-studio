@@ -23,8 +23,6 @@
         return false;
     });
 
-    console.log(mainNavLinks);
-
     function currentYPosition() {
         // Firefox, Chrome, Opera, Safari
         if (self.pageYOffset) return self.pageYOffset;
