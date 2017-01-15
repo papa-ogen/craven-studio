@@ -1,3 +1,6 @@
 
 htdocs/img/.DS_Store
 htdocs/.DS_Store
+node_modules
+npm-debug.log
+.DS_Store

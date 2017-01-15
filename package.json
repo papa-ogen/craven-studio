@@ -1,8 +1,17 @@
 {
   "name": "craven-studio",
-  "version": "0.1.0",
+  "version": "1.0.0",
+  "description": "Craven Studio web site and also CSS base for Craven Apps.",
+  "author": "Jörgen Thelin",
+  "url": "http://craven-studio.com/",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/papa-ogen/craven-studio.git"
+  },
   "devDependencies": {
     "grunt": "^1.0.1",
+    "grunt-contrib-cssmin": "^1.0.2",
     "grunt-contrib-jshint": "^1.0.0",
     "grunt-contrib-nodeunit": "~0.4.1",
     "grunt-contrib-uglify": "^2.0.0"

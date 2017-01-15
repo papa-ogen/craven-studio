@@ -1,0 +1,68 @@
+.row.cs-prompt {
+    .curtain-down;
+
+    & > .column {
+        padding: 1rem 5rem;
+
+        &:before {
+            padding: 5px 12px;
+            border-radius: 50%;
+            margin-right: 5px;
+        }
+    }
+
+    &.cs-error > .column {
+        color: darken(@red, 10%);
+        background: lighten(@red, 25%);
+        border-bottom: 1px solid darken(@red, 10%);
+
+        &:before {
+            content: "\03A9";
+            color: lighten(@red, 25%);
+            background: @red;
+            font-size: 1.4rem;
+            padding: 5px 10px;
+        }
+    }
+
+    &.cs-warning > .column {
+        color: darken(@yellow, 10%);
+        background: lighten(@yellow, 25%);
+        border-bottom: 1px solid darken(@yellow, 10%);
+
+        &:before {
+            content: "\0021";
+            font-weight: bold;
+            color: lighten(@yellow, 25%);
+            background: @yellow;
+        }
+    }
+
+    &.cs-success > .column {
+        color: darken(@green, 10%);
+        background: lighten(@green, 25%);
+        border-bottom: 1px solid darken(@green, 10%);
+
+        &:before {
+            content: "\2713";
+            color: lighten(@green, 25%);
+            background: @green;
+            font-weight: bold;
+            font-size: 1.4rem;
+            padding: 5px 8px;
+        }
+    }   
+
+    &.cs-info > .column {
+        color: darken(@light-blue, 10%);
+        background: lighten(@light-blue, 25%);
+        border-bottom: 1px solid darken(@light-blue, 10%);
+
+        &:before {
+            content: "i";
+            font-weight: bold;
+            color: lighten(@light-blue, 25%);
+            background: @light-blue;
+        }
+    }           
+}
