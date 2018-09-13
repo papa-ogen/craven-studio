@@ -8,8 +8,10 @@ import Projects from './Projects'
 const Root = ({ store }) => (
   <Provider store={store}>
     <Router>
-      <Route path="/:filter?" component={App} />
-      <Route exact path="/projects" component={Projects} />
+      <div>
+        <Route path="/:filter?" component={App} />
+        <Route exact path="/projects" component={Projects} />
+      </div>
     </Router>
   </Provider>
 )
