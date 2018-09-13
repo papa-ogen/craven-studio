@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
+import { Route } from 'react-router-dom'
+import Projects from './Projects.js';
 import logo from './logo.svg';
 import linkedInLogo from './linkedin.svg';
+
 import './App.css';
 
 class App extends Component {
@@ -16,6 +19,7 @@ class App extends Component {
             <img src={linkedInLogo} className="App-logo-linkedin" alt="logo" />
           </a>
         </p>
+        <Route exact path="/projects" component={Projects}/>
       </div>
     );
   }
