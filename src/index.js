@@ -3,7 +3,7 @@ import { render } from 'react-dom'
 import { createStore } from 'redux'
 import todoApp from './reducers'
 import Root from './components/Root'
-import registerServiceWorker from './registerServiceWorker';
+import registerServiceWorker from './registerServiceWorker'
 
 const store = createStore(todoApp)
 
@@ -12,4 +12,4 @@ render(
   document.getElementById('root')
 )
 
-registerServiceWorker();
+registerServiceWorker()

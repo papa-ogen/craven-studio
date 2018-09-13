@@ -1,5 +1,3 @@
-function cStudio(state = [], action) {
-  return state
-}
+function cStudio(state = []) { return state }
 
 export default cStudio
