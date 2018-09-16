@@ -2,6 +2,13 @@
   text-align: center;
 }
 
+.top-line {
+  margin: 0;
+  padding: 0;
+  background: orange;
+  height: 1px;
+}
+
 .App-logo {
   height: 120px;
 }
@@ -26,7 +33,12 @@
   font-size: large;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+
+.cs-footer {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -75px;
+  padding: 1rem;
+  font-size: 0.8em;
 }

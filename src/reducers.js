@@ -1,3 +1,3 @@
-function cStudio(state = []) { return state }
+function cStudio(state = {}) { return state }
 
 export default cStudio

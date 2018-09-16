@@ -1,21 +1,14 @@
 import React from 'react'
-import logo from './logo.svg'
-import linkedInLogo from './linkedin.svg'
+import Header from './Header'
+import Footer from './Footer'
 
 import './App.css'
 
 const App = () => (
   <div className="App">
-    <header className="App-header">
-      <img src={logo} className="App-logo" alt="logo" />
-      <h1 className="App-title">Welcome to React</h1>
-    </header>
-    <p className="App-intro">
-      <a href="https://www.linkedin.com/in/j%C3%B6rgen-thelin-48693a29/" target="self">
-        <img src={linkedInLogo} className="App-logo-linkedin" alt="logo" />
-      </a>
-    </p>
-
+    <hr className="top-line " />
+    <Header />
+    <Footer />
   </div>
 )
 

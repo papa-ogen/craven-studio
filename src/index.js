@@ -1,11 +1,17 @@
 import React from 'react'
 import { render } from 'react-dom'
 import { createStore } from 'redux'
-import todoApp from './reducers'
+import cStudio from './reducers'
 import Root from './components/Root'
 import registerServiceWorker from './registerServiceWorker'
 
-const store = createStore(todoApp)
+import './index.css'
+
+const store = createStore(
+  cStudio,
+  {},
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__() // eslint-disable-line
+)
 
 render(
   <Root store={store} />,
