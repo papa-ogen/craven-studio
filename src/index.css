@@ -1,5 +1,36 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: sans-serif; /* TODO: Add Fonts */
+  background-color: #26272b;
+  color: #dbdbdb;
+}
+
+main {
+  display: flex;
+  align-items: stretch;
+  height: 100vh;
+}
+
+.logo {
+  width: 240px;
+
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  flex: 100% 0;
+  text-align: center;
+  padding: 1rem;
+}
+
+.content:first-child {
+  background-color: #494c54;
+}
+
+.sub-content {
+  flex: 100% 0;
+  display: flex;
+  justify-content: center;
 }

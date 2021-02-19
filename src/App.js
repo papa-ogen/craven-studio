@@ -6,17 +6,25 @@ import './App.css';
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          <a href='https://www.linkedin.com/in/j%C3%B6rgen-thelin-48693a29/' target='self'>
-            <img src={linkedInLogo} className="App-logo-linkedin" alt="logo" />
-          </a>
-        </p>
-      </div>
+      <main>
+        <div className="content"></div>
+        <div className="content">
+          <nav>
+              Menu1 | Menu2
+          </nav>
+          <div className="sub-content">
+            <img src={logo} className="logo" alt="logo" />
+          </div>
+        </div>
+      </main>
+      // <div className="App">
+      //     <img src={logo} className="App-logo" alt="logo" />
+      //   <p className="App-intro">
+      //     <a href='https://www.linkedin.com/in/j%C3%B6rgen-thelin-48693a29/' target='self'>
+      //       <img src={linkedInLogo} className="App-logo-linkedin" alt="logo" />
+      //     </a>
+      //   </p>
+      // </div>
     );
   }
 }
