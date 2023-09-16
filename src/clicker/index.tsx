@@ -1,95 +1,9 @@
 import { Button, Text } from "@papa-ogen/craven-ui";
 import React, { useEffect, useState } from "react";
-
-type LevelType = {
-  name: string;
-  cost: number;
-  effect: number;
-  level: number;
-};
-
-const levelTypes: LevelType[] = [
-  {
-    name: "Earthworm",
-    cost: 10,
-    effect: 1,
-    level: 0,
-  },
-  {
-    name: "Dirt",
-    cost: 100,
-    effect: 1,
-    level: 0,
-  },
-  {
-    name: "Weed",
-    cost: 1000,
-    effect: 1,
-    level: 0,
-  },
-  {
-    name: "Shovel",
-    cost: 10000,
-    effect: 1,
-    level: 0,
-  },
-  {
-    name: "Rake",
-    cost: 100000,
-    effect: 1,
-    level: 0,
-  },
-  {
-    name: "Flower",
-    cost: 1000000,
-    effect: 1,
-    level: 0,
-  },
-  {
-    name: "Bush",
-    cost: 10000000,
-    effect: 1,
-    level: 0,
-  },
-  {
-    name: "Tree",
-    cost: 100000000,
-    effect: 1,
-    level: 0,
-  },
-  {
-    name: "x",
-    cost: 1000000000,
-    effect: 1,
-    level: 0,
-  },
-];
-
-type LevelButtonProps = {
-  onClick: (id: string) => void;
-  level: LevelType;
-  disabled: boolean;
-};
-
-const LevelButton = ({
-  onClick,
-  level: { name, level, cost },
-  disabled,
-}: LevelButtonProps) => {
-  return (
-    <Button onClick={() => onClick(name)} disabled={disabled}>
-      <div className="flex flex-row items-center w-full">
-        <div className="flex flex-col items-start pb-1 flex-1">
-          <div className="">{name}</div>
-          <Text size="xs" color="white" noMargin>
-            Cost: {cost.toFixed()}
-          </Text>
-        </div>
-        <div className="text-4xl pr-4 pl-1">{level}</div>
-      </div>
-    </Button>
-  );
-};
+import { LevelType } from "./clicker.type";
+import { levelTypes } from "./consts";
+import { commaSeparateNumber } from "./helper";
+import LevelButton from "./LevelButton";
 
 const Clicker = () => {
   const [increment, setIncrement] = useState(0);
@@ -134,7 +48,9 @@ const Clicker = () => {
 
   return (
     <div className="w-screen  p-20 flex space-x-4 space-y-4 flex-wrap">
-      <div className="flex-100">Currency: {currency.toFixed()}</div>
+      <div className="flex-100">
+        Currency: {commaSeparateNumber(currency.toFixed())}
+      </div>
       <div className="flex-1">
         <Button onClick={onIncrement}>
           <p className="p-36">Soil {increment.toFixed()}</p>
