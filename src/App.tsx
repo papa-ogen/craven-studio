@@ -1,4 +1,3 @@
-import { useState } from "react";
 import {
   ContextProvider,
   Footer,
@@ -9,10 +8,8 @@ import {
 } from "@papa-ogen/craven-ui";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <ContextProvider>
+    <>
       <main className="max-w-sm md:max-w-xl flex-col flex p-4 md:p-8 justify-center items-center flex-grow">
         <Heading>C Studio</Heading>
         <Page title="Web developer">
@@ -68,7 +65,7 @@ function App() {
           </div>
         </div>
       </Footer>
-    </ContextProvider>
+    </>
   );
 }
 
