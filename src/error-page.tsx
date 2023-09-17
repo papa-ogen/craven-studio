@@ -1,13 +1,5 @@
 import { useRouteError } from "react-router-dom";
-import {
-  ContextProvider,
-  Footer,
-  Heading,
-  Link,
-  Page,
-  StatusLabel,
-  Text,
-} from "@papa-ogen/craven-ui";
+import { Heading, Page, StatusLabel } from "@papa-ogen/craven-ui";
 
 export default function ErrorPage() {
   const error = useRouteError();

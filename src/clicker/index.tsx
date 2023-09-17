@@ -1,9 +1,10 @@
-import { Button, Text } from "@papa-ogen/craven-ui";
-import React, { useEffect, useState } from "react";
+import { Heading } from "@papa-ogen/craven-ui";
+import { useEffect, useState } from "react";
 import { LevelType } from "./clicker.type";
 import { levelTypes } from "./consts";
 import { commaSeparateNumber } from "./helper";
 import LevelButton from "./LevelButton";
+import GenerateButton from "./GenerateButton";
 
 const Clicker = () => {
   const [increment, setIncrement] = useState(0);
@@ -46,15 +47,23 @@ const Clicker = () => {
     return () => clearInterval(interval);
   }, [currency, increment]);
 
+  const currencyString = `Currency: ${commaSeparateNumber(currency.toFixed())}`;
+
   return (
-    <div className="w-screen  p-20 flex space-x-4 space-y-4 flex-wrap">
+    <div className="w-screen px-20 py-8 flex space-x-4 space-y-4 flex-wrap">
+      <div className="flex flex-100 items-center justify-center">
+        <Heading>
+          <span className="text-8xl">Garden Clicker</span>
+        </Heading>
+      </div>
       <div className="flex-100">
-        Currency: {commaSeparateNumber(currency.toFixed())}
+        <Heading type="sectionTitle">{currencyString}</Heading>
       </div>
       <div className="flex-1">
-        <Button onClick={onIncrement}>
-          <p className="p-36">Soil {increment.toFixed()}</p>
-        </Button>
+        <GenerateButton
+          onClick={onIncrement}
+          label={`Soil ${increment.toFixed()}`}
+        />
       </div>
       <div className="flex flex-col	space-y-4 flex-1">
         <header>1 | 10 | 100 | Max</header>
@@ -67,6 +76,7 @@ const Clicker = () => {
           />
         ))}
       </div>
+      <div className="flex-100 bg-slate-300">Total accumulated currency</div>
     </div>
   );
 };

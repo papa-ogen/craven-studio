@@ -8,6 +8,7 @@ import "../node_modules/@papa-ogen/craven-ui/dist/style.css";
 import ErrorPage from "./error-page";
 import Clicker from "./clicker";
 import { ContextProvider } from "@papa-ogen/craven-ui";
+import Footer from "./Footer";
 
 const router = createBrowserRouter([
   {
@@ -25,6 +26,7 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
     <ContextProvider>
       <RouterProvider router={router} />
+      <Footer />
     </ContextProvider>
   </React.StrictMode>
 );
