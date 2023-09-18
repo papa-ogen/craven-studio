@@ -10,7 +10,7 @@
     "deploy": "yarn build && cp CNAME dist gh-pages -d dist"
   },
   "dependencies": {
-    "@papa-ogen/craven-ui": "^0.0.27",
+    "@papa-ogen/craven-ui": "^0.1.1",
     "@react-spring/web": "^9.7.3",
     "autoprefixer": "^10.4.15",
     "postcss": "^8.4.29",

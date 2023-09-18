@@ -1,7 +1,7 @@
-import { Heading } from "@papa-ogen/craven-ui";
+import { Heading, Progress } from "@papa-ogen/craven-ui";
 import { useEffect, useState } from "react";
 import { LevelType } from "./clicker.type";
-import { levelTypes } from "./consts";
+import { levelTier, levelTypes } from "./consts";
 import { commaSeparateNumber } from "./helper";
 import LevelButton from "./LevelButton";
 import GenerateButton from "./GenerateButton";
@@ -47,6 +47,9 @@ const Clicker = () => {
     const interval = setInterval(() => {
       setCurrency(currency + increment);
       setTotalCurrency(totalCurrency + increment);
+
+      if ((totalCurrency / levelTier[playerLevel]) * 100 >= 100)
+        setPlayerLevel(playerLevel + 1);
     }, 1000);
     return () => clearInterval(interval);
   }, [currency, increment]);
@@ -68,9 +71,13 @@ const Clicker = () => {
           <Heading type="sectionTitle">{currencyString}</Heading>
           <Heading type="sectionTitle">{playerLevelString}</Heading>
         </div>
-        <div className="flex-100">
-          Total accumulated currency:{" "}
-          {commaSeparateNumber(totalCurrency.toFixed())}
+        <div className="flex-100 pt-2">
+          <Progress
+            labelBottom={` Total accumulated currency: ${commaSeparateNumber(
+              totalCurrency.toFixed()
+            )}`}
+            progress={(totalCurrency / levelTier[playerLevel]) * 100}
+          />
         </div>
       </header>
       <section className="flex space-x-10">
