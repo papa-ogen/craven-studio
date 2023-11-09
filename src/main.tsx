@@ -6,7 +6,7 @@ import App from "./App";
 import "./index.css";
 import "../node_modules/@papa-ogen/craven-ui/dist/style.css";
 import ErrorPage from "./error-page";
-import Clicker from "./clicker";
+import { Clicker, DivideDebt } from "./routes";
 import { ContextProvider } from "@papa-ogen/craven-ui";
 import Footer from "./Footer";
 
@@ -19,6 +19,10 @@ const router = createBrowserRouter([
   {
     path: "clicker",
     element: <Clicker />,
+  },
+  {
+    path: "divide-debt",
+    element: <DivideDebt />,
   },
 ]);
 

@@ -6,7 +6,7 @@ import { commaSeparateNumber } from "./helper";
 import LevelButton from "./LevelButton";
 import GenerateButton from "./GenerateButton";
 
-const Clicker = () => {
+export const Clicker = () => {
   const [totalCurrency, setTotalCurrency] = useState(0);
   const [playerLevel, setPlayerLevel] = useState(0);
   const [increment, setIncrement] = useState(0);
@@ -102,5 +102,3 @@ const Clicker = () => {
     </div>
   );
 };
-
-export default Clicker;

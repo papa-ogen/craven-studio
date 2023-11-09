@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { Button, Text } from "@papa-ogen/craven-ui";
+import { Button, Input, Text } from "@papa-ogen/craven-ui";
 import { useSpring, animated, easings } from "@react-spring/web";
 import { commaSeparateNumber } from "./helper";
 import { LevelType } from "./clicker.type";
