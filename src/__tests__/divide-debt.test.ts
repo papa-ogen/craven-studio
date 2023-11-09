@@ -1,7 +1,29 @@
-function sum(a: number, b: number) {
-  return a + b;
-}
+import { IParticipant } from "../divide-debt";
+import { divideDebt, getTotalDebt } from "../utils";
 
-test("adds 1 + 2 to equal 3", () => {
-  expect(sum(1, 2)).toBe(3);
+test("Calculate debt", () => {
+  const givenParticipants: IParticipant[] = [
+    {
+      name: "John",
+      paid: 10,
+    },
+    {
+      name: "Mary",
+    },
+  ];
+  const total = getTotalDebt(givenParticipants);
+
+  const expectedParticipants = [
+    {
+      name: "John",
+      paid: 10,
+      debt: 5,
+    },
+    {
+      name: "Mary",
+      debt: -5,
+    },
+  ];
+
+  expect(divideDebt(total, givenParticipants)).toEqual(expectedParticipants);
 });
