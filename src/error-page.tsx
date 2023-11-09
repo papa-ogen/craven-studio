@@ -2,7 +2,7 @@ import { useRouteError } from "react-router-dom";
 import { Heading, Page, StatusLabel } from "@papa-ogen/craven-ui";
 
 export default function ErrorPage() {
-  const error = useRouteError();
+  const error: any = useRouteError();
   console.error(error);
 
   return (
