@@ -1,5 +1,6 @@
 import { Button, Heading, Input } from "@papa-ogen/craven-ui";
 import { useState } from "react";
+import { AnimatePresence, motion, useIsPresent } from "framer-motion";
 import { divideDebt, getTotalDebt } from "../utils";
 
 export interface IParticipant {
@@ -15,8 +16,15 @@ const FormRow = ({
   participant?: IParticipant;
   id: number;
 }) => {
+  const isPresent = useIsPresent();
+  const animations = {
+    initial: { scale: 0, opacity: 0 },
+    animate: { scale: 1, opacity: 1 },
+    exit: { scale: 0, opacity: 0 },
+    transition: { type: "spring", stiffness: 900, damping: 40 },
+  };
   return (
-    <div className="flex space-x-4">
+    <motion.div className="flex space-x-4" {...animations} layout>
       <Input
         label={`Participant #${id + 1}`}
         id={`participant-name-${id}`}
@@ -43,7 +51,7 @@ const FormRow = ({
           hasError={participant?.debt < 0}
         />
       )}
-    </div>
+    </motion.div>
   );
 };
 
@@ -88,9 +96,11 @@ export const DivideDebt = () => {
         </div>
       </form>
       <div className="flex flex-col">
-        {participants.map((participant, i) => (
-          <FormRow participant={participant} key={participant.name} id={i} />
-        ))}
+        <AnimatePresence>
+          {participants.map((participant, i) => (
+            <FormRow participant={participant} key={participant.name} id={i} />
+          ))}
+        </AnimatePresence>
       </div>
       <hr className="text-orange-500" />
       <Heading type="sectionTitle">Total: {totalDebt}</Heading>

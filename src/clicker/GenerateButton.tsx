@@ -1,4 +1,3 @@
-import { Button } from "@papa-ogen/craven-ui";
 import { useSpring, animated, easings } from "@react-spring/web";
 
 type GenerateButtonProps = {

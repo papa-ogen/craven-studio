@@ -27,3 +27,31 @@ test("Calculate debt", () => {
 
   expect(divideDebt(total, givenParticipants)).toEqual(expectedParticipants);
 });
+
+test("Calculate debt with no participants", () => {
+  const givenParticipants: IParticipant[] = [];
+  const total = getTotalDebt(givenParticipants);
+
+  const expectedParticipants: IParticipant[] = [];
+
+  expect(divideDebt(total, givenParticipants)).toEqual(expectedParticipants);
+});
+
+test("Calculate total debt", () => {
+  const givenParticipants: IParticipant[] = [
+    {
+      name: "John",
+      paid: 10,
+    },
+    {
+      name: "Mary",
+    },
+    {
+      name: "Peter",
+      paid: 10,
+    },
+  ];
+  const total = getTotalDebt(givenParticipants);
+
+  expect(total).toEqual(20);
+});
