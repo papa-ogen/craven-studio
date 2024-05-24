@@ -14,6 +14,10 @@ export default {
         bebasNeue: ["bebas-neue", "sans-serif"],
         inter: ["Inter", "sans-serif"],
       },
+      backgroundImage: {
+        "dot-pattern": "url('/public/dot-bg.svg')",
+        "dot-pattern-white": "url('/public/dot-bg-white.svg')",
+      },
     },
   },
   plugins: [],
