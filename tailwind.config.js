@@ -1,11 +1,18 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  content: ["./**/*.{html,js}"],
   theme: {
     extend: {
-      flex: {
-        2: "2 2 0%",
-        100: "0 0 100%",
+      colors: {
+        orange: "#FF5E00",
+        dark: "#251D18",
+        yellow: "#FFD014",
+        gray: "#E7E5E4",
+        beige: "#FDF5E2",
+      },
+      fontFamily: {
+        bebasNeue: ["bebas-neue", "sans-serif"],
+        inter: ["Inter", "sans-serif"],
       },
     },
   },

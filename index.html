@@ -9,9 +9,47 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="manifest" href="/site.webmanifest" />
+
+    <link href="./public/output.css" rel="stylesheet" />
   </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+  <body class="inter">
+    <div
+      class="h-screen w-screen bg-gradient-to-r from-[#251d18] to-[#50392b] p-8 py-4"
+    >
+      <header class="flex items-center">
+        <img
+          title="C Studio Logo"
+          src="./public/c-studio-logo-orange.svg"
+          class="w-[128px] hidden md:block mr-auto"
+        />
+        <nav class="text-beige">
+          <ul class="flex space-x-16 items-center">
+            <li>
+              <a href="#" class="selected">Start</a>
+            </li>
+            <li>
+              <a href="#">Projects</a>
+            </li>
+            <li>
+              <a href="#">Music</a>
+            </li>
+            <li>
+              <a href="#">About</a>
+            </li>
+            <li>
+              <a href="#"
+                ><button
+                  type="button"
+                  title="Make Contact"
+                  class="bg-beige text-dark font-light px-4 py-2 rounded-sm"
+                >
+                  Contact
+                </button></a
+              >
+            </li>
+          </ul>
+        </nav>
+      </header>
+    </div>
   </body>
 </html>
