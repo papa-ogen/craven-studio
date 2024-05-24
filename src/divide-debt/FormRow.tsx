@@ -33,7 +33,7 @@ export const FormRow = forwardRef<HTMLDivElement, FormRowProps>(
           label={`Participant ${id + 1}`}
           id={`participant-name-${id}`}
           name="participant-name"
-          value={participant?.name || undefined}
+          defaultValue={participant?.name || undefined}
           placeholder="Name..."
           ref={participantNameRef}
         />
@@ -42,7 +42,6 @@ export const FormRow = forwardRef<HTMLDivElement, FormRowProps>(
           id={`participant-paid-${id}`}
           name="participant-paid"
           value={participant?.paid ? participant.paid.toFixed() : undefined}
-          defaultValue={0}
           placeholder="Amount..."
           type="number"
           onChange={(e) =>
@@ -54,7 +53,7 @@ export const FormRow = forwardRef<HTMLDivElement, FormRowProps>(
             label="Debt"
             id={`participant-debt-${id}`}
             name="participant-debt"
-            value={participant?.debt}
+            defaultValue={participant?.debt}
             placeholder="Difference..."
             type="number"
             hasError={participant?.debt < 0}

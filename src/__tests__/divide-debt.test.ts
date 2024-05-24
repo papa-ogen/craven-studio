@@ -4,10 +4,12 @@ import { divideDebt, getTotalDebt } from "../utils";
 test("Calculate debt", () => {
   const givenParticipants: IParticipant[] = [
     {
+      id: "participant-0",
       name: "John",
       paid: 10,
     },
     {
+      id: "participant-1",
       name: "Mary",
     },
   ];
@@ -15,13 +17,15 @@ test("Calculate debt", () => {
 
   const expectedParticipants = [
     {
+      debt: 5,
+      id: "participant-0",
       name: "John",
       paid: 10,
-      debt: 5,
     },
     {
-      name: "Mary",
       debt: -5,
+      id: "participant-1",
+      name: "Mary",
     },
   ];
 
@@ -40,13 +44,16 @@ test("Calculate debt with no participants", () => {
 test("Calculate total debt", () => {
   const givenParticipants: IParticipant[] = [
     {
+      id: "participant-0",
       name: "John",
       paid: 10,
     },
     {
+      id: "participant-1",
       name: "Mary",
     },
     {
+      id: "participant-2",
       name: "Peter",
       paid: 10,
     },

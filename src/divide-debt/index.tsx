@@ -1,8 +1,9 @@
 import { Button, Heading, Page } from "@papa-ogen/craven-ui";
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useCallback } from "react";
 import { AnimatePresence } from "framer-motion";
 import { divideDebt, getTotalDebt } from "../utils";
 import { FormRow } from "./FormRow";
+import { divideRepay } from "./divide-count";
 export interface IParticipant {
   id: string;
   name: string;
@@ -15,6 +16,9 @@ export const DivideDebt = () => {
   const [isFormValid, setIsFormValid] = useState(false);
   const totalDebt = getTotalDebt(participants);
   const formRowRef = useRef<HTMLInputElement>(null);
+  const repay = useCallback(() => {
+    return divideRepay(participants);
+  }, [participants]);
 
   const addParticipant = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -89,6 +93,13 @@ export const DivideDebt = () => {
           Total:{" "}
           {totalDebt.toLocaleString(undefined, { minimumFractionDigits: 2 })}
         </Heading>
+        {participants.length > 0 && (
+          <Heading type="sectionTitle">
+            {repay().map((r, i) => {
+              return <p key={i}>{r}</p>;
+            })}
+          </Heading>
+        )}
       </Page>
     </main>
   );
