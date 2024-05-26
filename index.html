@@ -17,9 +17,9 @@
       <!-- START -->
       <div
         id="start"
-        class="min-h-screen bg-gradient-to-r from-[#251d18] to-[#50392b] p-8 sm:px-16 py-4 sm:py-8 flex flex-col"
+        class="min-h-screen bg-gradient-to-r from-[#251d18] to-[#50392b] p-4 sm:px-16 py-4 sm:py-8 flex flex-col"
       >
-        <header class="flex items-center sticky w-full">
+        <header class="flex items-center sticky top-0 w-full">
           <div class="grow">
             <img
               title="C Studio Logo"
@@ -27,8 +27,8 @@
               class="w-[128px] hidden lg:block mr-auto"
             />
           </div>
-          <nav class="text-beige w-full lg:w-auto">
-            <ul class="flex space-x-8 sm:space-x-16 items-center">
+          <nav class="text-beige w-full lg:w-auto text-sm">
+            <ul class="flex space-x-4 sm:space-x-16 items-center">
               <li>
                 <a href="#" class="selected">Start</a>
               </li>
@@ -59,7 +59,7 @@
           class="my-8 grow bg-dot-pattern bg-opacity-10 flex flex-col items-end pt-16 lg:pt-24"
         >
           <div class="md:mr-24">
-            <a href="" class="border px-4 py-2 uppercase"
+            <a href="#projects" class="border px-4 py-2 uppercase"
               >View my <span class="text-orange">portfolio</span></a
             >
             <h1 class="text-6xl lg:text-8xl uppercase bebasNeue mt-6 mb-2">
@@ -82,9 +82,9 @@
       <!-- PROJECTS-->
       <div
         id="projects"
-        class="min-h-screen bg-gradient-to-r from-[#F45C01] to-[#D87236] p-8 sm:px-16 py-4 sm:py-8 flex flex-col"
+        class="min-h-screen bg-gradient-to-r from-[#F45C01] to-[#D87236] p-4 sm:px-16 py-4 sm:py-8 flex flex-col"
       >
-        <header class="flex items-center w-full">
+        <header class="flex items-center w-full sticky top-0">
           <div class="grow">
             <img
               title="C Studio Logo"
@@ -92,8 +92,8 @@
               class="w-[128px] hidden lg:block mr-auto"
             />
           </div>
-          <nav class="text-beige w-full lg:w-auto">
-            <ul class="flex space-x-8 sm:space-x-16 items-center">
+          <nav class="text-beige w-full lg:w-auto text-sm">
+            <ul class="flex space-x-4 sm:space-x-16 items-center">
               <li>
                 <a href="#">Start</a>
               </li>
@@ -129,7 +129,7 @@
           </h2>
 
           <div
-            class="flex flex-col md:grid grid-cols-2 lg:grid-cols-3 gap-16 xl:gap-28"
+            class="flex flex-col md:grid grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-16 xl:gap-28"
           >
             <article class="bg-white rounded-2xl shadow-lg p-4 min-h-96">
               <h3 class="text-4xl text-dark inter mb-2">Project 1</h3>
@@ -192,16 +192,16 @@
       <!-- MUSIC -->
       <div
         id="music"
-        class="min-h-screen bg-gradient-to-r from-[#fff] to-[#C7C7C7] p-8 sm:px-16 py-4 sm:py-8 flex flex-col"
+        class="min-h-screen bg-gradient-to-r from-[#fff] to-[#C7C7C7] p-4 sm:px-16 py-4 sm:py-8 flex flex-col"
       >
-        <header class="flex items-center sticky w-full">
+        <header class="flex items-center sticky w-full top-0">
           <img
             title="C Studio Logo"
             src="./public/c-studio-logo-black-orange.svg"
             class="w-[128px] hidden lg:block mr-auto"
           />
-          <nav class="text-dark w-full lg:w-auto">
-            <ul class="flex space-x-8 sm:space-x-16 items-center">
+          <nav class="text-dark w-full lg:w-auto text-sm">
+            <ul class="flex space-x-4 sm:space-x-16 items-center">
               <li>
                 <a href="#">Start</a>
               </li>
@@ -228,7 +228,9 @@
             </ul>
           </nav>
         </header>
-        <section class="my-8 mx-8 grow bg-dot-pattern flex flex-col items-end">
+        <section
+          class="my-8 mx-4 sm:mx-8 grow bg-dot-pattern flex flex-col items-end"
+        >
           <h1 class="text-6xl text-orange lg:text-8xl uppercase inter mb-2">
             My Music
           </h1>
@@ -237,7 +239,7 @@
           </h2>
 
           <div
-            class="flex flex-col md:grid grid-cols-2 lg:grid-cols-3 gap-16 xl:gap-28 text-dark justify-center items-center w-full"
+            class="flex flex-col md:grid grid-cols-2 lg:grid-cols-3 sm:gap-16 xl:gap-28 text-dark justify-center items-center w-full"
           >
             <article class="rounded-md p-4 min-h-96">
               <h3 class="text-4xl inter mb-2">Metal</h3>
@@ -271,6 +273,32 @@
                 title="Chill playlist"
                 class="rounded-md"
                 src="https://open.spotify.com/embed/playlist/47xHZ22GhBGs7FJuXopV7P?utm_source=generator"
+                width="100%"
+                height="380"
+                frameborder="0"
+                allowfullscreen=""
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              ></iframe>
+            </article>
+            <article class="rounded-md p-4 min-h-96">
+              <h3 class="text-4xl inter mb-2">Rock</h3>
+              <iframe
+                title="Rock playlist"
+                class="rounded-md"
+                src="https://open.spotify.com/embed/playlist/6V96zdLa7YuIwm6PWXWnTG?utm_source=generator"
+                width="100%"
+                height="380"
+                frameborder="0"
+                allowfullscreen=""
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              ></iframe>
+            </article>
+            <article class="rounded-md p-4 min-h-96">
+              <h3 class="text-4xl inter mb-2">Trance & DnB</h3>
+              <iframe
+                title="Trance playlist"
+                class="rounded-md"
+                src="https://open.spotify.com/embed/playlist/0uFxrUMDCFtf7XF8XoDWvt?utm_source=generator"
                 width="100%"
                 height="380"
                 frameborder="0"
