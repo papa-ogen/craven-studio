@@ -17,6 +17,12 @@
     content: "";
     left: 50%;
   }
+
+  &.dark {
+    &::before {
+      background: #251d18;
+    }
+  }
 }
 
 html {
