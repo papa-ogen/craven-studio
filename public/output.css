@@ -749,11 +749,6 @@ video {
   margin-bottom: 2rem;
 }
 
-.mx-auto {
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .mb-2 {
   margin-bottom: 0.5rem;
 }
@@ -1937,10 +1932,6 @@ video {
   background-image: url('/public/dot-bg-white.svg');
 }
 
-.bg-gradient-to-b {
-  background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
-}
-
 .bg-gradient-to-r {
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
 }
@@ -1973,10 +1964,6 @@ video {
 
 .to-\[\#D87236\] {
   --tw-gradient-to: #D87236 var(--tw-gradient-to-position);
-}
-
-.to-transparent {
-  --tw-gradient-to: transparent var(--tw-gradient-to-position);
 }
 
 .decoration-slice {
@@ -2177,6 +2164,10 @@ video {
   vertical-align: super;
 }
 
+.font-bebasNeue {
+  font-family: bebas-neue, sans-serif;
+}
+
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
@@ -2202,6 +2193,11 @@ video {
   line-height: 1.75rem;
 }
 
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1;
+}
+
 .font-bold {
   font-weight: 700;
 }
@@ -2212,6 +2208,10 @@ video {
 
 .font-light {
   font-weight: 300;
+}
+
+.font-semibold {
+  font-weight: 600;
 }
 
 .uppercase {
@@ -2678,6 +2678,8 @@ video {
   forced-color-adjust: none;
 }
 
+/* @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@100..900&display=swap"); */
+
 .selected {
   position: relative;
   &::before {
@@ -2784,6 +2786,11 @@ html {
   .sm\:py-8 {
     padding-top: 2rem;
     padding-bottom: 2rem;
+  }
+
+  .sm\:text-6xl {
+    font-size: 3.75rem;
+    line-height: 1;
   }
 
   .sm\:underline {

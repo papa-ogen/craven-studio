@@ -3,6 +3,11 @@
 @tailwind utilities;
 
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@100..900&display=swap");
+
+html {
+  scroll-behavior: smooth;
+}
+
 .selected {
   position: relative;
 
@@ -25,6 +30,6 @@
   }
 }
 
-html {
-  scroll-behavior: smooth;
+.pulsing-dots {
+  // TODO: Add animation
 }
