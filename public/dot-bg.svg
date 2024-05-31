@@ -1,4 +1,12 @@
 
-<svg width="40" height="40" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" class="pulsing-dots">
-<circle cx="4" cy="4" r="4" fill="#8C8C8C"  opacity="0.3"/>
+<svg width="40" height="40" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+<style type="text/css">
+        #a { animation: x 4s ease alternate 14; }
+
+        @keyframes x {
+           from {opacity: 0.3;}
+             to { opacity: 0;}
+        }
+    </style>
+<circle id="a" cx="4" cy="4" r="4" fill="#8C8C8C"  opacity="0.3"/>
 </svg>

@@ -679,8 +679,16 @@ video {
   inset: -0.25rem;
 }
 
+.bottom-0 {
+  bottom: 0px;
+}
+
 .end-1 {
   inset-inline-end: 0.25rem;
+}
+
+.left-0 {
+  left: 0px;
 }
 
 .top-0 {
@@ -693,6 +701,10 @@ video {
 
 .isolation-auto {
   isolation: auto;
+}
+
+.z-50 {
+  z-index: 50;
 }
 
 .float-start {
@@ -888,6 +900,10 @@ video {
   height: 2.25rem;
 }
 
+.h-full {
+  height: 100%;
+}
+
 .min-h-96 {
   min-height: 24rem;
 }
@@ -914,6 +930,10 @@ video {
 
 .w-full {
   width: 100%;
+}
+
+.w-auto {
+  width: auto;
 }
 
 .flex-shrink {
@@ -1936,6 +1956,10 @@ video {
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
 }
 
+.bg-jugge {
+  background-image: url('/public/jugge.png');
+}
+
 .from-\[\#251d18\] {
   --tw-gradient-from: #251d18 var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(37 29 24 / 0) var(--tw-gradient-to-position);
@@ -1986,6 +2010,10 @@ video {
           box-decoration-break: clone;
 }
 
+.bg-18 {
+  background-size: 18rem;
+}
+
 .bg-fixed {
   background-attachment: fixed;
 }
@@ -2013,6 +2041,10 @@ video {
 .bg-clip-text {
   -webkit-background-clip: text;
           background-clip: text;
+}
+
+.bg-left-bottom {
+  background-position: left bottom;
 }
 
 .bg-repeat {
@@ -2108,6 +2140,10 @@ video {
   padding-top: 4rem;
 }
 
+.pt-8 {
+  padding-top: 2rem;
+}
+
 .text-left {
   text-align: left;
 }
@@ -2178,8 +2214,8 @@ video {
   line-height: 2.5rem;
 }
 
-.text-6xl {
-  font-size: 3.75rem;
+.text-5xl {
+  font-size: 3rem;
   line-height: 1;
 }
 
@@ -2193,9 +2229,9 @@ video {
   line-height: 1.75rem;
 }
 
-.text-5xl {
-  font-size: 3rem;
-  line-height: 1;
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
 }
 
 .font-bold {
@@ -2678,7 +2714,9 @@ video {
   forced-color-adjust: none;
 }
 
-/* @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@100..900&display=swap"); */
+html {
+  scroll-behavior: smooth;
+}
 
 .selected {
   position: relative;
@@ -2700,9 +2738,41 @@ video {
   }
 }
 
-html {
-  scroll-behavior: smooth;
+/* .pulsing-dots {
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
+  transform: scale(1);
+  animation: pulse 2s infinite;
 }
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+  }
+
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+  }
+
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+}
+
+.pulsing-dots {
+  animation: x 0.5s ease alternate 14;
+}
+
+@keyframes x {
+  from {
+    fill: #000;
+  }
+  to {
+    fill: #fff;
+  }
+} */
 
 @media (min-width: 640px) {
   .sm\:container {
@@ -2763,9 +2833,25 @@ html {
 }
 
 @media (min-width: 640px) {
+  .sm\:left-32 {
+    left: 8rem;
+  }
+
   .sm\:mx-8 {
     margin-left: 2rem;
     margin-right: 2rem;
+  }
+
+  .sm\:grow {
+    flex-grow: 1;
+  }
+
+  .sm\:items-end {
+    align-items: flex-end;
+  }
+
+  .sm\:justify-end {
+    justify-content: flex-end;
   }
 
   .sm\:gap-16 {
@@ -2778,6 +2864,10 @@ html {
     margin-left: calc(4rem * calc(1 - var(--tw-space-x-reverse)));
   }
 
+  .sm\:bg-26 {
+    background-size: 26rem;
+  }
+
   .sm\:px-16 {
     padding-left: 4rem;
     padding-right: 4rem;
@@ -2786,6 +2876,10 @@ html {
   .sm\:py-8 {
     padding-top: 2rem;
     padding-bottom: 2rem;
+  }
+
+  .sm\:pt-16 {
+    padding-top: 4rem;
   }
 
   .sm\:text-6xl {
@@ -2805,6 +2899,10 @@ html {
 
   .md\:grid {
     display: grid;
+  }
+
+  .md\:grow {
+    flex-grow: 1;
   }
 }
 
