@@ -703,10 +703,6 @@ video {
   isolation: auto;
 }
 
-.z-50 {
-  z-index: 50;
-}
-
 .float-start {
   float: inline-start;
 }
@@ -759,6 +755,16 @@ video {
 .my-8 {
   margin-top: 2rem;
   margin-bottom: 2rem;
+}
+
+.my-12 {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.my-20 {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
 }
 
 .mb-2 {
@@ -916,6 +922,10 @@ video {
   width: 128px;
 }
 
+.w-\[300px\] {
+  width: 300px;
+}
+
 .w-\[this-is\\\\\] {
   width: this-is\\;
 }
@@ -932,8 +942,8 @@ video {
   width: 100%;
 }
 
-.w-auto {
-  width: auto;
+.w-screen {
+  width: 100vw;
 }
 
 .flex-shrink {
@@ -1960,6 +1970,10 @@ video {
   background-image: url('/public/jugge.png');
 }
 
+.bg-jugge-transparent {
+  background-image: url('/public/jugge-transparent.png');
+}
+
 .from-\[\#251d18\] {
   --tw-gradient-from: #251d18 var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(37 29 24 / 0) var(--tw-gradient-to-position);
@@ -2134,10 +2148,6 @@ video {
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
-}
-
-.pt-16 {
-  padding-top: 4rem;
 }
 
 .pt-8 {
@@ -2837,13 +2847,30 @@ html {
     left: 8rem;
   }
 
+  .sm\:z-10 {
+    z-index: 10;
+  }
+
   .sm\:mx-8 {
     margin-left: 2rem;
     margin-right: 2rem;
   }
 
-  .sm\:grow {
-    flex-grow: 1;
+  .sm\:my-8 {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .sm\:block {
+    display: block;
+  }
+
+  .sm\:hidden {
+    display: none;
+  }
+
+  .sm\:w-\[400px\] {
+    width: 400px;
   }
 
   .sm\:items-end {
@@ -2899,10 +2926,6 @@ html {
 
   .md\:grid {
     display: grid;
-  }
-
-  .md\:grow {
-    flex-grow: 1;
   }
 }
 

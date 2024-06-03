@@ -18,6 +18,7 @@ export default {
         "dot-pattern": "url('/public/dot-bg.svg')",
         "dot-pattern-white": "url('/public/dot-bg-white.svg')",
         jugge: "url('/public/jugge.png')",
+        "jugge-transparent": "url('/public/jugge-transparent.png')",
       },
       backgroundSize: {
         "50%": "50%",
