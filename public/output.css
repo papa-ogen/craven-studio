@@ -1905,6 +1905,10 @@ video {
   border-top-width: 1px;
 }
 
+.border-b-2 {
+  border-bottom-width: 2px;
+}
+
 .border-solid {
   border-style: solid;
 }
@@ -1927,6 +1931,11 @@ video {
 
 .border-none {
   border-style: none;
+}
+
+.border-orange {
+  --tw-border-opacity: 1;
+  border-color: rgb(255 94 0 / var(--tw-border-opacity));
 }
 
 .bg-\[rgb\(255\2c 0\2c 0\)\] {
@@ -2153,6 +2162,10 @@ video {
 
 .p-4 {
   padding: 1rem;
+}
+
+.p-2 {
+  padding: 0.5rem;
 }
 
 .px-4 {
@@ -2956,6 +2969,10 @@ html {
 
   .md\:grid {
     display: grid;
+  }
+
+  .md\:max-w-md {
+    max-width: 28rem;
   }
 }
 
