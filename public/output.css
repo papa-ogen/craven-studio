@@ -703,6 +703,10 @@ video {
   isolation: auto;
 }
 
+.z-50 {
+  z-index: 50;
+}
+
 .float-start {
   float: inline-start;
 }
@@ -752,19 +756,14 @@ video {
   margin-right: 1rem;
 }
 
-.my-8 {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
-
-.my-12 {
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-}
-
 .my-20 {
   margin-top: 5rem;
   margin-bottom: 5rem;
+}
+
+.my-8 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .mb-2 {
@@ -942,8 +941,8 @@ video {
   width: 100%;
 }
 
-.w-screen {
-  width: 100vw;
+.max-w-lg {
+  max-width: 32rem;
 }
 
 .flex-shrink {
@@ -1974,6 +1973,14 @@ video {
   background-image: url('/public/jugge-transparent.png');
 }
 
+.bg-jugge-white {
+  background-image: url('/public/jugge-white.png');
+}
+
+.bg-jugge-white-transparent {
+  background-image: url('/public/jugge-white-transparent.png');
+}
+
 .from-\[\#251d18\] {
   --tw-gradient-from: #251d18 var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(37 29 24 / 0) var(--tw-gradient-to-position);
@@ -1983,6 +1990,12 @@ video {
 .from-\[\#F45C01\] {
   --tw-gradient-from: #F45C01 var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(244 92 1 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.from-\[\#FDF5E2\] {
+  --tw-gradient-from: #FDF5E2 var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(253 245 226 / 0) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
@@ -2002,6 +2015,10 @@ video {
 
 .to-\[\#D87236\] {
   --tw-gradient-to: #D87236 var(--tw-gradient-to-position);
+}
+
+.to-\[\#fff\] {
+  --tw-gradient-to: #fff var(--tw-gradient-to-position);
 }
 
 .decoration-slice {
@@ -2026,6 +2043,14 @@ video {
 
 .bg-18 {
   background-size: 18rem;
+}
+
+.bg-20 {
+  background-size: 20rem;
+}
+
+.bg-22 {
+  background-size: 22rem;
 }
 
 .bg-fixed {
@@ -2227,6 +2252,11 @@ video {
 .text-5xl {
   font-size: 3rem;
   line-height: 1;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
 }
 
 .text-sm {
