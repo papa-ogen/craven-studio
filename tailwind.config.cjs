@@ -15,12 +15,13 @@ export default {
         inter: ["Inter", "sans-serif"],
       },
       backgroundImage: {
-        "dot-pattern": "url('/dot-bg.svg')",
-        "dot-pattern-white": "url('/dot-bg-white.svg')",
-        jugge: "url('/jugge.png')",
-        "jugge-transparent": "url('/jugge-transparent.png')",
-        "jugge-white": "url('/jugge-white.png')",
-        "jugge-white-transparent": "url('/jugge-white-transparent.png')",
+        "dot-pattern": "url('/src/assets/dot-bg.svg')",
+        "dot-pattern-white": "url('/src/assets/dot-bg-white.svg')",
+        jugge: "url('/src/assets/jugge.png')",
+        "jugge-transparent": "url('/src/assets/jugge-transparent.png')",
+        "jugge-white": "url('/src/assets/jugge-white.png')",
+        "jugge-white-transparent":
+          "url('/src/assets/jugge-white-transparent.png')",
       },
       backgroundSize: {
         "50%": "50%",
