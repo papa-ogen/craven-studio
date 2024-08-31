@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./**/*.{html,js}"],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       colors: {
@@ -15,12 +15,12 @@ export default {
         inter: ["Inter", "sans-serif"],
       },
       backgroundImage: {
-        "dot-pattern": "url('/public/dot-bg.svg')",
-        "dot-pattern-white": "url('/public/dot-bg-white.svg')",
-        jugge: "url('/public/jugge.png')",
-        "jugge-transparent": "url('/public/jugge-transparent.png')",
-        "jugge-white": "url('/public/jugge-white.png')",
-        "jugge-white-transparent": "url('/public/jugge-white-transparent.png')",
+        "dot-pattern": "url('/dot-bg.svg')",
+        "dot-pattern-white": "url('/dot-bg-white.svg')",
+        jugge: "url('/jugge.png')",
+        "jugge-transparent": "url('/jugge-transparent.png')",
+        "jugge-white": "url('/jugge-white.png')",
+        "jugge-white-transparent": "url('/jugge-white-transparent.png')",
       },
       backgroundSize: {
         "50%": "50%",
